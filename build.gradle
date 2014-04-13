@@ -23,3 +23,9 @@ jar {
     from files(compileJava)
     baseName = "${project.archivesBaseName}-full"
 }
+tasks.withType(Compile) {
+    options.encoding = "CP1251"
+}
+task prepareWrapper(type: Wrapper) {
+   gradleVersion = '1.4'
+}
