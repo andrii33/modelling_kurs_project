@@ -1,0 +1,31 @@
+apply plugin:'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'main.java.VisualFrame'
+sourceCompatibility = 1.5
+version = '1.0'
+manifest.mainAttributes("Main-Class" : "main.java.VisualFrame")
+
+repositories {
+	mavenCentral()
+    flatDir { dirs 'lib' }
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile name: 'Simulation_17_01_2013'
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'main.java.VisualFrame'
+    }
+	from configurations.compile.collect {it.directory ? it : zipTree(it)}
+    from files(compileJava)
+    baseName = "${project.archivesBaseName}-full"
+}
+tasks.withType(Compile) {
+    options.encoding = "CP1251"
+}
+task prepareWrapper(type: Wrapper) {
+   gradleVersion = '1.4'
+}
