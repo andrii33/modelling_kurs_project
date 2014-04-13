@@ -76,5 +76,29 @@ public class Klient extends Actor {
 	public void setTimeAddToQueueKassa(double timeAddToQueueKassa) {
 		this.timeAddToQueueKassa = timeAddToQueueKassa;
 	}
+	
+	public QueueForTransactions getQueueTorgovyiZal() {
+		return queueTorgovyiZal;
+	}
+
+	public void setQueueTorgovyiZal(QueueForTransactions queueTorgovyiZal) {
+		this.queueTorgovyiZal = queueTorgovyiZal;
+	}
+
+	public QueueForTransactions getQueueKassa() {
+		return queueKassa;
+	}
+
+	public void setQueueKassa(QueueForTransactions queueKassa) {
+		this.queueKassa = queueKassa;
+	}
+
+	public Histo getHistoForQueueTimeInQueueKassa() {
+		return histoForQueueTimeInQueueKassa;
+	}
+
+	public void setHistoForQueueTimeInQueueKassa(Histo histoForQueueTimeInQueueKassa) {
+		this.histoForQueueTimeInQueueKassa = histoForQueueTimeInQueueKassa;
+	}
 
 }
