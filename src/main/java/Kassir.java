@@ -7,6 +7,7 @@ import process.QueueForTransactions;
 import rnd.Randomable;
 
 public class Kassir extends Actor {
+	
 	//Продолжительность работы кассира
 	private double finishTime;
 	//Очередь у касс
@@ -46,5 +47,30 @@ public class Kassir extends Actor {
 			holdForTime(rndVremiaObslKl.next());
 		} while (getDispatcher().getCurrentTime() <= finishTime);
 	}
+	
+	public double getFinishTime() {
+		return finishTime;
+	}
+
+	public void setFinishTime(double finishTime) {
+		this.finishTime = finishTime;
+	}
+
+	public QueueForTransactions getQueueKassa() {
+		return queueKassa;
+	}
+
+	public void setQueueKassa(QueueForTransactions queueKassa) {
+		this.queueKassa = queueKassa;
+	}
+
+	public Klient getKlient() {
+		return klient;
+	}
+
+	public void setKlient(Klient klient) {
+		this.klient = klient;
+	}
+
 
 }
