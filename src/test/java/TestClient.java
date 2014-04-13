@@ -23,5 +23,12 @@ public class TestClient {
 		klient.setObsluzhen(true);
 		assertTrue(klient.isObsluzhen());
 	}
+	
+	@Test
+	public void testTimeToQueueKassa() {
+		klient.setTimeAddToQueueKassa(25.5);
+		assertEquals(25.5, klient.getTimeAddToQueueKassa(),0);
+	}
+	
 
 }
