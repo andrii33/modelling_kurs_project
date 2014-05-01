@@ -31,8 +31,14 @@ public class TestModelWorking {
 				 dispatcher = new Dispatcher();
 					Factory factory = new Factory(gui);
 					model = (Model) factory.createModel(dispatcher);	
-					
-				 	gui.startTestForTest(model, dispatcher);	
+				 	gui.startTestForTest(model, dispatcher);
+				 	try {
+						wait(10000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				 	gui.dispose();
 			}
 		});
 	   
@@ -43,10 +49,8 @@ public class TestModelWorking {
 		while (true) {
 			if ( dispatcher != null && dispatcher.getWaitingActorQueue()!= null ) {
 				int size = dispatcher.getWaitingActorQueue().size();
-				assertEquals(0, size,0);
-				gui.dispose();
-				break;
-			    
+				assertEquals(0, size,0);		
+				break; 
 			}	
 		}
 		
