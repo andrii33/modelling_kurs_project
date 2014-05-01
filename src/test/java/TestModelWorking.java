@@ -45,10 +45,11 @@ public class TestModelWorking {
 				int size = dispatcher.getWaitingActorQueue().size();
 				assertEquals(0, size,0);
 				break;
+			    
 			}	
 		}
-		System.exit(0);
 		
+		gui.dispose();
 		
 	}
 
