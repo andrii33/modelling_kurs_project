@@ -339,7 +339,7 @@ public class VisualFrame extends JFrame {
 		return diagramKassa;
 	}
 
-	private void startTest() {
+	public void startTest() {
 		getDiagramKassa().clear();
 		getDiagramQueueCustomers().clear();
 		final Dispatcher dispatcher = new Dispatcher();
@@ -360,7 +360,26 @@ public class VisualFrame extends JFrame {
 		}.start();
 	}
 	
-	private void startStat() {
+	public void startTestForTest(Model model, final Dispatcher dispatcher) {
+		getDiagramKassa().clear();
+		getDiagramQueueCustomers().clear();
+		
+		model.initForTest();
+		getJButtonStart().setEnabled(false);
+		dispatcher.start();
+		new Thread() {
+			public void run() {
+				try {
+					dispatcher.getThread().join();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				getJButtonStart().setEnabled(true);
+			};
+		}.start();
+	}
+	
+	public void startStat() {
 		getDiagramQueueTorgovyiZal().clear();
 		getJTextAreaQueueTorgovyiZal().setText("");
 		getDiagramTimeInQueueKassa().clear();
