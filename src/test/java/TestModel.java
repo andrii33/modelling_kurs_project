@@ -42,7 +42,6 @@ public class TestModel {
 	    gui = new VisualFrame();
 		dispatcher = new Dispatcher();
 	 	model = new Model(dispatcher, gui);
-		
 	 	multiKassir = model.getMultiKassir();
 		queueKassa = model.getQueueKassa();
 		queueTorgovyiZal = model.getQueueTorgovyiZal();
