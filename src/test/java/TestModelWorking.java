@@ -38,7 +38,7 @@ public class TestModelWorking {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-				 	gui.dispose();
+					System.exit(0);
 			}
 		});
 	   
