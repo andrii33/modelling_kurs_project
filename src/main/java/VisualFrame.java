@@ -378,7 +378,7 @@ public class VisualFrame extends JFrame {
 			};
 		}.start();
 		try {
-			wait(10000);
+			wait(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
