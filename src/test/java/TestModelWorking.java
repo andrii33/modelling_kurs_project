@@ -27,7 +27,7 @@ public class TestModelWorking {
 			public void run() {
 				gui = new VisualFrame();
 				gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				gui.setVisible(true);
+				gui.setVisible(false);
 				 dispatcher = new Dispatcher();
 					Factory factory = new Factory(gui);
 					model = (Model) factory.createModel(dispatcher);	
