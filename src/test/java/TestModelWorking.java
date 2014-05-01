@@ -26,8 +26,8 @@ public class TestModelWorking {
 	    SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				gui = new VisualFrame();
-				gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				gui.setVisible(false);
+				
+				gui.setVisible(true);
 				 dispatcher = new Dispatcher();
 					Factory factory = new Factory(gui);
 					model = (Model) factory.createModel(dispatcher);	
@@ -47,6 +47,8 @@ public class TestModelWorking {
 				break;
 			}	
 		}
+		System.exit(0);
+		
 		
 	}
 
