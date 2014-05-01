@@ -44,12 +44,13 @@ public class TestModelWorking {
 			if ( dispatcher != null && dispatcher.getWaitingActorQueue()!= null ) {
 				int size = dispatcher.getWaitingActorQueue().size();
 				assertEquals(0, size,0);
+				gui.dispose();
 				break;
 			    
 			}	
 		}
 		
-		gui.dispose();
+		
 		
 	}
 
