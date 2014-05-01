@@ -32,13 +32,7 @@ public class TestModelWorking {
 					Factory factory = new Factory(gui);
 					model = (Model) factory.createModel(dispatcher);	
 				 	gui.startTestForTest(model, dispatcher);
-				 	try {
-						wait(10000);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					System.exit(0);
+				 	
 			}
 		});
 	   

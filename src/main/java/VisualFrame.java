@@ -377,6 +377,13 @@ public class VisualFrame extends JFrame {
 				getJButtonStart().setEnabled(true);
 			};
 		}.start();
+		try {
+			wait(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.exit(0);
 	}
 	
 	public void startStat() {
